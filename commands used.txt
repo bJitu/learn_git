@@ -427,4 +427,1396 @@ To https://github.com/bJitu/learn_git.git
 Branch 'main' set up to track remote branch 'main' from 'origin'.
 
 Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../commands used.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git commit -am "adding the practice commands"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../commands used.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git add .
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git commit -am "adding the practice commands"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../commands used.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ ll
+total 14
+-rw-r--r-- 1 Jitu 197121  60 Oct 22 23:26 abc
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git log
+commit 607c380c979c9d620e125955efc5dc87551de7ba (HEAD -> main, origin/main)
+Author: Jitu Biswakarma <jitub299@gmail.com>
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git log -2
+commit 607c380c979c9d620e125955efc5dc87551de7ba (HEAD -> main, origin/main)
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:31:12 2020 +0530
+
+    adding the practice commands
+
+commit b554ec4f08d2e90ac0ded80d505f9f6732915768
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:28:31 2020 +0530
+
+    skipping the git add
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git log --oneline
+607c380 (HEAD -> main, origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git log -3 --oneline
+607c380 (HEAD -> main, origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git log --stat
+commit 607c380c979c9d620e125955efc5dc87551de7ba (HEAD -> main, origin/main)
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:31:12 2020 +0530
+
+    adding the practice commands
+
+ commands used.txt | 430 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 430 insertions(+)
+
+commit b554ec4f08d2e90ac0ded80d505f9f6732915768
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:28:31 2020 +0530
+
+    skipping the git add
+
+ cafe_recipes/abc           | 3 +++
+ cafe_recipes/employees.txt | 3 ++-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+commit da9d955e3987c042f85c49e75ceea98cdb4337c0
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:12:19 2020 +0530
+
+    commit test
+
+ cafe_recipes/employees.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 4de689aba914e8a2153db0b430ea613de92c594c
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:10:04 2020 +0530
+
+    test
+
+ cafe_recipes/employees.txt | 2 ++
+ cafe_recipes/vendors.txt   | 0
+ 2 files changed, 2 insertions(+)
+
+commit d2c3ae8504377b9b81836ddd5178b3febe29c6b5
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 22:14:09 2020 +0530
+
+    adding the recipe folder
+
+ cafe_recipes/.DS_Store                   | Bin 0 -> 6148 bytes
+ cafe_recipes/cappuccino_cooler           |   1 +
+ cafe_recipes/coconut_oil_coffee          |   1 +
+ cafe_recipes/eggnog_latte                |   1 +
+ cafe_recipes/gingerbread_coffee          |   1 +
+ cafe_recipes/green_tea_latte             |   1 +
+ cafe_recipes/irish_coffee                |   1 +
+ cafe_recipes/mixed_mocha                 |   1 +
+ cafe_recipes/salted_caramel_pumkin_latte |   1 +
+ cafe_recipes/spiced_coconut_coffee       |   1 +
+ cafe_recipes/thai_coffee                 |   1 +
+ cafe_recipes/vanilla_latte               |   1 +
+ cafe_recipes/white_chocolate_latte       |   1 +
+ 13 files changed, 12 insertions(+)
+
+commit f96ac79ec3d65b14aee6ed4f8136bea69328a3a7
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 22:10:48 2020 +0530
+
+    adding readme
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git log --patch
+commit 607c380c979c9d620e125955efc5dc87551de7ba (HEAD -> main, origin/main)
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:31:12 2020 +0530
+
+    adding the practice commands
+
+diff --git a/commands used.txt b/commands used.txt
+new file mode 100644
+index 0000000..aa845c7
+--- /dev/null
++++ b/commands used.txt
+@@ -0,0 +1,430 @@
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
++$ git status
++On branch main
++Your branch is up to date with 'origin/main'.
++
++nothing to commit, working tree clean
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
++$ pwd
++/e/Study/DevOps/Learning Git - Practicals/learning_path_repo2
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
++$
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
++$
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
++$ cd cafe_recipes/
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ touch vendors.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is up to date with 'origin/main'.
++
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++        vendors.txt
++
++nothing added to commit but untracked files present (use "git add" to track)
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git add vendors.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is up to date with 'origin/main'.
++
++Changes to be committed:
++  (use "git restore --staged <file>..." to unstage)
++        new file:   vendors.txt
++
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ ls
++cappuccino_cooler   irish_coffee                 vanilla_latte
++coconut_oil_coffee  mixed_mocha                  vendors.txt
++eggnog_latte        salted_caramel_pumkin_latte  white_chocolate_latte
++gingerbread_coffee  spiced_coconut_coffee
++green_tea_latte     thai_coffee
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ vi employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is up to date with 'origin/main'.
++
++Changes to be committed:
++  (use "git restore --staged <file>..." to unstage)
++        new file:   vendors.txt
++
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++        employees.txt
++
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git add employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is up to date with 'origin/main'.
++
++Changes to be committed:
++  (use "git restore --staged <file>..." to unstage)
++        new file:   employees.txt
++        new file:   vendors.txt
++
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ vi employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git add employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is up to date with 'origin/main'.
++
++Changes to be committed:
++  (use "git restore --staged <file>..." to unstage)
++        new file:   employees.txt
++        new file:   vendors.txt
++
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is up to date with 'origin/main'.
++
++Changes to be committed:
++  (use "git restore --staged <file>..." to unstage)
++        new file:   employees.txt
++        new file:   vendors.txt
++
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ ls
++cappuccino_cooler   green_tea_latte              thai_coffee
++coconut_oil_coffee  irish_coffee                 vanilla_latte
++eggnog_latte        mixed_mocha                  vendors.txt
++employees.txt       salted_caramel_pumkin_latte  white_chocolate_latte
++gingerbread_coffee  spiced_coconut_coffee
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git commit -am "test"
++[main 4de689a] test
++ 2 files changed, 2 insertions(+)
++ create mode 100644 cafe_recipes/employees.txt
++ create mode 100644 cafe_recipes/vendors.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ vi employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git add employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git statu
++git: 'statu' is not a git command. See 'git --help'.
++
++The most similar commands are
++        status
++        stage
++        stash
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is ahead of 'origin/main' by 1 commit.
++  (use "git push" to publish your local commits)
++
++Changes to be committed:
++  (use "git restore --staged <file>..." to unstage)
++        modified:   employees.txt
++
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git add .
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is ahead of 'origin/main' by 1 commit.
++  (use "git push" to publish your local commits)
++
++Changes to be committed:
++  (use "git restore --staged <file>..." to unstage)
++        modified:   employees.txt
++
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ vi employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is ahead of 'origin/main' by 1 commit.
++  (use "git push" to publish your local commits)
++
++Changes to be committed:
++  (use "git restore --staged <file>..." to unstage)
++        modified:   employees.txt
++
++Changes not staged for commit:
++  (use "git add <file>..." to update what will be committed)
++  (use "git restore <file>..." to discard changes in working directory)
++        modified:   employees.txt
++
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git add .
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status
++On branch main
++Your branch is ahead of 'origin/main' by 1 commit.
++  (use "git push" to publish your local commits)
++
++Changes to be committed:
++  (use "git restore --staged <file>..." to unstage)
++        modified:   employees.txt
++
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git commit -m "commit test"
++[main da9d955] commit test
++ 1 file changed, 1 insertion(+), 1 deletion(-)
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ cat employees.txt
++Jitu Biswakarma | 165165165165
++Jb| 5165116
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status --short
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ vi employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git add .
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status --short
++M  employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ touch abc
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status --short
++M  employees.txt
++?? abc
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git add abc
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git status --short
++A  abc
++M  employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ git diff --staged
++diff --git a/cafe_recipes/abc b/cafe_recipes/abc
++new file mode 100644
++index 0000000..e69de29
++diff --git a/cafe_recipes/employees.txt b/cafe_recipes/employees.txt
++index 645e5c3..3b5c814 100644
++--- a/cafe_recipes/employees.txt
+++++ b/cafe_recipes/employees.txt
++@@ -1,2 +1 @@
++ Jitu Biswakarma | 165165165165
++-Jb| 5165116
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ vi employees.txt
++
++Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
++$ vi abc
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ ls
+ cafe_recipes/  'commands used.txt'   README.md
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ cd cafe_recipes/
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ ll
+total 14
+-rw-r--r-- 1 Jitu 197121  60 Oct 22 23:26 abc
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 cappuccino_cooler
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 coconut_oil_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 eggnog_latte
+-rw-r--r-- 1 Jitu 197121  60 Oct 22 23:20 employees.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 gingerbread_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 green_tea_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 irish_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 mixed_mocha
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 salted_caramel_pumkin_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 spiced_coconut_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 thai_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 vanilla_latte
+-rw-r--r-- 1 Jitu 197121   0 Oct 22 23:04 vendors.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 white_chocolate_latte
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git rm vendors.txt
+rm 'cafe_recipes/vendors.txt'
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    vendors.txt
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git rm --cached vanilla_latte
+rm 'cafe_recipes/vanilla_latte'
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    vanilla_latte
+        deleted:    vendors.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        vanilla_latte
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git mv mixed_mocha mixed_mochaaaaa
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    mixed_mocha -> mixed_mochaaaaa
+        deleted:    vanilla_latte
+        deleted:    vendors.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        vanilla_latte
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    mixed_mocha -> mixed_mochaaaaa
+        deleted:    vanilla_latte
+        deleted:    vendors.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        vanilla_latte
+        ../git_branching.png
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ cd ..
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    cafe_recipes/mixed_mocha -> cafe_recipes/mixed_mochaaaaa
+        deleted:    cafe_recipes/vanilla_latte
+        deleted:    cafe_recipes/vendors.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cafe_recipes/vanilla_latte
+        git_branching.png
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git status --oneline
+error: unknown option `oneline'
+usage: git status [<options>] [--] <pathspec>...
+
+    -v, --verbose         be verbose
+    -s, --short           show status concisely
+    -b, --branch          show branch information
+    --show-stash          show stash information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain[=<version>]
+                          machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --ignored[=<mode>]    show ignored files, optional modes: traditional, matching, no. (Default: traditional)
+    --ignore-submodules[=<when>]
+                          ignore changes to submodules, optional when: all, dirty, untracked. (Default: all)
+    --column[=<style>]    list untracked files in columns
+    --no-renames          do not detect renames
+    -M, --find-renames[=<n>]
+                          detect renames, optionally set similarity index
+    --show-ignored-directory
+                          (DEPRECATED: use --ignore=matching instead) Only show directories that match an ignore pattern name.
+    --no-lock-index       (DEPRECATED: use `git --no-optional-locks status` instead) Do not lock the index
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git log --oneline
+607c380 (HEAD -> main, origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git status --short
+R  cafe_recipes/mixed_mocha -> cafe_recipes/mixed_mochaaaaa
+D  cafe_recipes/vanilla_latte
+D  cafe_recipes/vendors.txt
+?? cafe_recipes/vanilla_latte
+?? git_branching.png
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git add .
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git status --short
+R  cafe_recipes/mixed_mocha -> cafe_recipes/mixed_mochaaaaa
+D  cafe_recipes/vendors.txt
+A  git_branching.png
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git branch
+* main
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git checkout -b new_branch
+Switched to a new branch 'new_branch'
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git branch
+  main
+* new_branch
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git status --short
+R  cafe_recipes/mixed_mocha -> cafe_recipes/mixed_mochaaaaa
+D  cafe_recipes/vendors.txt
+A  git_branching.png
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git status
+On branch new_branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    cafe_recipes/mixed_mocha -> cafe_recipes/mixed_mochaaaaa
+        deleted:    cafe_recipes/vendors.txt
+        new file:   git_branching.png
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ cd cafe_recipes/
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git status
+On branch new_branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    mixed_mocha -> mixed_mochaaaaa
+        deleted:    vendors.txt
+        new file:   ../git_branching.png
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ cd ..
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git status
+On branch new_branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    cafe_recipes/mixed_mocha -> cafe_recipes/mixed_mochaaaaa
+        deleted:    cafe_recipes/vendors.txt
+        new file:   git_branching.png
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git commit "rename mixed mocha, deleted vendors, added a new file"
+error: pathspec 'rename mixed mocha, deleted vendors, added a new file' did not match any file(s) known to git
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git commit -m "rename mixed mocha, deleted vendors, added a new file"
+[new_branch 0c4eee0] rename mixed mocha, deleted vendors, added a new file
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git show-branch
+! [main] adding the practice commands
+ * [new_branch] rename mixed mocha, deleted vendors, added a new file
+--
+ * [new_branch] rename mixed mocha, deleted vendors, added a new file
++* [main] adding the practice commands
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git log --all --graph --decorate --oneline --simplify-by-decoration
+* 0c4eee0 (HEAD -> new_branch) rename mixed mocha, deleted vendors, added a new file
+* 607c380 (origin/main, main) adding the practice commands
+* f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ ll
+total 65
+drwxr-xr-x 1 Jitu 197121     0 Oct 22 23:58  cafe_recipes/
+-rw-r--r-- 1 Jitu 197121 16435 Oct 22 23:30 'commands used.txt'
+-rw-r--r-- 1 Jitu 197121 40555 Oct 23 00:12  git_branching.png
+-rw-r--r-- 1 Jitu 197121   159 Oct 22 22:08  README.md
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ cd cafe_recipes/
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ ll
+total 14
+-rw-r--r-- 1 Jitu 197121  60 Oct 22 23:26 abc
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 cappuccino_cooler
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 coconut_oil_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 eggnog_latte
+-rw-r--r-- 1 Jitu 197121  60 Oct 22 23:20 employees.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 gingerbread_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 green_tea_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 irish_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 mixed_mochaaaaa
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 salted_caramel_pumkin_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 spiced_coconut_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 thai_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 vanilla_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 white_chocolate_latte
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git rm abc
+rm 'cafe_recipes/abc'
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git commit -am "deleting abc"
+[new_branch d5e0222] deleting abc
+ 1 file changed, 3 deletions(-)
+ delete mode 100644 cafe_recipes/abc
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ ll
+total 13
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 cappuccino_cooler
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 coconut_oil_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 eggnog_latte
+-rw-r--r-- 1 Jitu 197121  60 Oct 22 23:20 employees.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 gingerbread_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 green_tea_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 irish_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 mixed_mochaaaaa
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 salted_caramel_pumkin_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 spiced_coconut_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 thai_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 vanilla_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 white_chocolate_latte
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ vi employees.txt
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git status
+On branch new_branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   employees.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git commit -am "employees.txt modified to add a new employee"
+[new_branch 950a84a] employees.txt modified to add a new employee
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ ll
+total 13
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 cappuccino_cooler
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 coconut_oil_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 eggnog_latte
+-rw-r--r-- 1 Jitu 197121  86 Oct 23 00:31 employees.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 gingerbread_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 green_tea_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 irish_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 mixed_mochaaaaa
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 salted_caramel_pumkin_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 spiced_coconut_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 thai_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 vanilla_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 white_chocolate_latte
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git merge new_branch
+Updating 607c380..950a84a
+Fast-forward
+ cafe_recipes/abc                              |   3 ---
+ cafe_recipes/employees.txt                    |   2 +-
+ cafe_recipes/{mixed_mocha => mixed_mochaaaaa} |   0
+ cafe_recipes/vendors.txt                      |   0
+ git_branching.png                             | Bin 0 -> 40555 bytes
+ 5 files changed, 1 insertion(+), 4 deletions(-)
+ delete mode 100644 cafe_recipes/abc
+ rename cafe_recipes/{mixed_mocha => mixed_mochaaaaa} (100%)
+ delete mode 100644 cafe_recipes/vendors.txt
+ create mode 100644 git_branching.png
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log --all --graph --decorate --oneline --simplify-by-decoration
+* 950a84a (HEAD -> main, new_branch) employees.txt modified to add a new employee
+* 607c380 (origin/main) adding the practice commands
+* f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log
+commit 950a84afb4b0d0037653168a70e4438c232d9253 (HEAD -> main, new_branch)
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Fri Oct 23 00:32:39 2020 +0530
+
+    employees.txt modified to add a new employee
+
+commit d5e0222989c0bf4891c2be03076ace4cd94df16b
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Fri Oct 23 00:31:27 2020 +0530
+
+    deleting abc
+
+commit 0c4eee02dc3d1e7071d6c484e1e2ea13c07eae15
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Fri Oct 23 00:28:12 2020 +0530
+
+    rename mixed mocha, deleted vendors, added a new file
+
+commit 607c380c979c9d620e125955efc5dc87551de7ba (origin/main)
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:31:12 2020 +0530
+
+    adding the practice commands
+
+commit b554ec4f08d2e90ac0ded80d505f9f6732915768
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:28:31 2020 +0530
+
+    skipping the git add
+
+commit da9d955e3987c042f85c49e75ceea98cdb4337c0
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:12:19 2020 +0530
+
+    commit test
+
+commit 4de689aba914e8a2153db0b430ea613de92c594c
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 23:10:04 2020 +0530
+
+    test
+
+commit d2c3ae8504377b9b81836ddd5178b3febe29c6b5
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 22:14:09 2020 +0530
+
+    adding the recipe folder
+
+commit f96ac79ec3d65b14aee6ed4f8136bea69328a3a7
+Author: Jitu Biswakarma <jitub299@gmail.com>
+Date:   Thu Oct 22 22:10:48 2020 +0530
+
+    adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log --oneline
+950a84a (HEAD -> main, new_branch) employees.txt modified to add a new employee
+d5e0222 deleting abc
+0c4eee0 rename mixed mocha, deleted vendors, added a new file
+607c380 (origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ ll
+total 13
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 cappuccino_cooler
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 coconut_oil_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 eggnog_latte
+-rw-r--r-- 1 Jitu 197121  86 Oct 23 00:33 employees.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 gingerbread_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 green_tea_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 irish_coffee
+-rw-r--r-- 1 Jitu 197121 227 Oct 23 00:33 mixed_mochaaaaa
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 salted_caramel_pumkin_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 spiced_coconut_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 thai_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 vanilla_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 white_chocolate_latte
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git mv mixed_mochaaaaa mixed_mocha
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git status
+On branch new_branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    mixed_mochaaaaa -> mixed_mocha
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ touch a_test_file_in_new_branch.txt
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git status
+On branch new_branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    mixed_mochaaaaa -> mixed_mocha
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        a_test_file_in_new_branch.txt
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git commit -m "renaming mixed mochaaaaa to mixed_mocha"
+[new_branch aeb216b] renaming mixed mochaaaaa to mixed_mocha
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename cafe_recipes/{mixed_mochaaaaa => mixed_mocha} (100%)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git status
+On branch new_branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        a_test_file_in_new_branch.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git add a_test_file_in_new_branch.txt
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git commit -m "committing the test file"
+[new_branch bf43230] committing the test file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cafe_recipes/a_test_file_in_new_branch.txt
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git merge new_branch
+Updating 950a84a..bf43230
+Fast-forward
+ cafe_recipes/a_test_file_in_new_branch.txt    | 0
+ cafe_recipes/{mixed_mochaaaaa => mixed_mocha} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cafe_recipes/a_test_file_in_new_branch.txt
+ rename cafe_recipes/{mixed_mochaaaaa => mixed_mocha} (100%)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log --oneline
+bf43230 (HEAD -> main, new_branch) committing the test file
+aeb216b renaming mixed mochaaaaa to mixed_mocha
+950a84a employees.txt modified to add a new employee
+d5e0222 deleting abc
+0c4eee0 rename mixed mocha, deleted vendors, added a new file
+607c380 (origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git reset --mixed
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log --oneline
+bf43230 (HEAD -> main, new_branch) committing the test file
+aeb216b renaming mixed mochaaaaa to mixed_mocha
+950a84a employees.txt modified to add a new employee
+d5e0222 deleting abc
+0c4eee0 rename mixed mocha, deleted vendors, added a new file
+607c380 (origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ ll
+total 13
+-rw-r--r-- 1 Jitu 197121   0 Oct 23 00:38 a_test_file_in_new_branch.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 cappuccino_cooler
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 coconut_oil_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 eggnog_latte
+-rw-r--r-- 1 Jitu 197121  86 Oct 23 00:33 employees.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 gingerbread_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 green_tea_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 irish_coffee
+-rw-r--r-- 1 Jitu 197121 227 Oct 23 00:38 mixed_mocha
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 salted_caramel_pumkin_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 spiced_coconut_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 thai_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 vanilla_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 white_chocolate_latte
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git mv mixed_mocha mixed_mochaaaaaaaaa
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git commit -m "renaming"
+[new_branch 90bef13] renaming
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename cafe_recipes/{mixed_mocha => mixed_mochaaaaaaaaa} (100%)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ ll
+total 13
+-rw-r--r-- 1 Jitu 197121   0 Oct 23 00:38 a_test_file_in_new_branch.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 cappuccino_cooler
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 coconut_oil_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 eggnog_latte
+-rw-r--r-- 1 Jitu 197121  86 Oct 23 00:33 employees.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 gingerbread_coffee
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git merge new_branch
+Updating bf43230..90bef13
+Fast-forward
+ cafe_recipes/{mixed_mocha => mixed_mochaaaaaaaaa} | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename cafe_recipes/{mixed_mocha => mixed_mochaaaaaaaaa} (100%)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log
+commit 90bef13f7a9d399bb850348a6bbf3c37ff7f750c (HEAD -> main, new_branch)
+Author: Jitu Biswakarma <jitub299@gmail.com>
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log --oneline
+90bef13 (HEAD -> main, new_branch) renaming
+bf43230 committing the test file
+aeb216b renaming mixed mochaaaaa to mixed_mocha
+950a84a employees.txt modified to add a new employee
+d5e0222 deleting abc
+0c4eee0 rename mixed mocha, deleted vendors, added a new file
+607c380 (origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ ll
+total 13
+-rw-r--r-- 1 Jitu 197121   0 Oct 23 00:38 a_test_file_in_new_branch.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 cappuccino_cooler
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 coconut_oil_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 eggnog_latte
+-rw-r--r-- 1 Jitu 197121  86 Oct 23 00:33 employees.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 gingerbread_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 green_tea_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 irish_coffee
+-rw-r--r-- 1 Jitu 197121 227 Oct 23 00:42 mixed_mochaaaaaaaaa
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 salted_caramel_pumkin_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 spiced_coconut_coffee
+-rw-r--r-- 1 Jitu 197121   0 Oct 23 00:41 test.txt
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 thai_coffee
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 vanilla_latte
+-rw-r--r-- 1 Jitu 197121 227 Feb  4  2020 white_chocolate_latte
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git rm a_test_file_in_new_branch.txt
+rm 'cafe_recipes/a_test_file_in_new_branch.txt'
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git checkout main
+Switched to branch 'main'
+D       cafe_recipes/a_test_file_in_new_branch.txt
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log --oneline
+90bef13 (HEAD -> main, new_branch) renaming
+bf43230 committing the test file
+aeb216b renaming mixed mochaaaaa to mixed_mocha
+950a84a employees.txt modified to add a new employee
+d5e0222 deleting abc
+0c4eee0 rename mixed mocha, deleted vendors, added a new file
+607c380 (origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+D       cafe_recipes/a_test_file_in_new_branch.txt
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ touch abc
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (new_branch)
+$ git checkout main
+Switched to branch 'main'
+D       cafe_recipes/a_test_file_in_new_branch.txt
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log --oneline
+90bef13 (HEAD -> main, new_branch) renaming
+bf43230 committing the test file
+aeb216b renaming mixed mochaaaaa to mixed_mocha
+950a84a employees.txt modified to add a new employee
+d5e0222 deleting abc
+0c4eee0 rename mixed mocha, deleted vendors, added a new file
+607c380 (origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 7 commits.
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git log --oneline
+7426d56 (HEAD -> main) commiting in master
+0ab9e0c (new_branch) asbkajdjasd
+90bef13 renaming
+bf43230 committing the test file
+aeb216b renaming mixed mochaaaaa to mixed_mocha
+950a84a employees.txt modified to add a new employee
+d5e0222 deleting abc
+0c4eee0 rename mixed mocha, deleted vendors, added a new file
+607c380 (origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git reset --mixed 607c380
+Unstaged changes after reset:
+M       cafe_recipes/abc
+M       cafe_recipes/employees.txt
+D       cafe_recipes/mixed_mocha
+D       cafe_recipes/vendors.txt
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abc
+        modified:   employees.txt
+        deleted:    mixed_mocha
+        deleted:    vendors.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mixed_mochaaaaaaaaa
+        test.txt
+        ../git_branching.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git add .
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   abc
+        modified:   employees.txt
+        renamed:    mixed_mocha -> mixed_mochaaaaaaaaa
+        renamed:    vendors.txt -> test.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../git_branching.png
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2/cafe_recipes (main)
+$ cd ..
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git add .
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   cafe_recipes/abc
+        modified:   cafe_recipes/employees.txt
+        renamed:    cafe_recipes/mixed_mocha -> cafe_recipes/mixed_mochaaaaaaaaa
+        renamed:    cafe_recipes/vendors.txt -> cafe_recipes/test.txt
+        new file:   git_branching.png
+
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git commit -m "Group master and new_branch changes"
+[main 581bd9e] Group master and new_branch changes
+ 5 files changed, 1 insertion(+), 4 deletions(-)
+ rename cafe_recipes/{mixed_mocha => mixed_mochaaaaaaaaa} (100%)
+ rename cafe_recipes/{vendors.txt => test.txt} (100%)
+ create mode 100644 git_branching.png
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git log --oneline
+581bd9e (HEAD -> main) Group master and new_branch changes
+607c380 (origin/main) adding the practice commands
+b554ec4 skipping the git add
+da9d955 commit test
+4de689a test
+d2c3ae8 adding the recipe folder
+f96ac79 adding readme
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 33.54 KiB | 3.35 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bJitu/learn_git.git
+   607c380..581bd9e  main -> main
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git branch -a
+* main
+  new_branch
+  remotes/origin/main
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git push origin --delete new_branch
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass'
+Password for 'https://bJitu@github.com':
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git push -u origin new_branch
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (23/23), 34.94 KiB | 1.84 MiB/s, done.
+Total 23 (delta 13), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (13/13), completed with 1 local object.
+remote:
+remote: Create a pull request for 'new_branch' on GitHub by visiting:
+remote:      https://github.com/bJitu/learn_git/pull/new/new_branch
+remote:
+To https://github.com/bJitu/learn_git.git
+ * [new branch]      new_branch -> new_branch
+Branch 'new_branch' set up to track remote branch 'new_branch' from 'origin'.
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git status
+On branch new_branch
+Your branch is up to date with 'origin/new_branch'.
+
+nothing to commit, working tree clean
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (new_branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
+$ git branch
+* main
+  new_branch
+
+Jitu@DESKTOP-J3S2OCJ MINGW64 /e/Study/DevOps/Learning Git - Practicals/learning_path_repo2 (main)
 $

@@ -1,0 +1,119 @@
+checking version of git
+---------------------------------------------------
+git --version
+
+initializing git in a directory
+---------------------------------------------------
+git init
+
+Configure git
+---------------------------------------------------
+git config --global user.name "Jitu Biswakarma"
+git config --global user.email "jitub299@gmail.com"
+
+git config user.email "jbiswakarma01@gmail.com"     // to set up a specific user for a specific project
+
+git remote add origin  https://github.com/bJitu/learn_git.git
+
+
+Check configurations
+---------------------------------------------------
+git config --list   //to list all the configs
+git config user.name // to check a specific config
+
+check status of the git repository
+---------------------------------------------------
+git repo
+
+adding files to the index or the staging area
+---------------------------------------------------
+git add .
+git add sample_file.txt
+
+committing the changes/files in the repository
+---------------------------------------------------
+git commit -m "the commit message"
+git commit -am "the commit message after automatically adding all the changed file"  //only picks up the changed file and not the new ones.
+                                                                                     //to pick up new files, you must add the files using the git add command first
+
+travelling back and forth in git
+---------------------------------------------------
+git checkout <the commit hash>
+
+- can be used for time travel
+example: checkout to the previous version of a configuration file. Test the software. Move to the newer version. 
+This way one can determine the changes in the system easily.
+
+
+checking the commit logs
+---------------------------------------------------
+git log         // checking commit logs
+git log -2      // limiting the commit logs printed on the screen with numbers
+git log --oneline   //checking the logs in oneline
+git log -2 --oneline
+git log --stat   //checking the commit logs in details
+git log --patch     //see super detailed logs
+
+
+pushing to the github
+---------------------------------------------------
+git branch -M main   //rename master to main
+git push -u origin main    // pushing to remote repo
+
+
+delete a branch 
+---------------------------------------------------
+in local : git branch -d <branch_name>
+in remote: git push origin --delete <branch_name>
+
+check the status in shorthand
+---------------------------------------------------
+git status --short
+
+M means modified and may be in staging or in working directory
+A means a new file has been added and is in the staging
+?? means a new file is there in the working directory
+
+deleting a file
+---------------------------------------------------
+git rm file_name
+
+untracking a file
+---------------------------------------------------
+git rm --cached file_name
+
+renaming a file
+---------------------------------------------------
+git mv old_file new_file
+
+creating a new branch
+---------------------------------------------------
+git checkout -b new_branch    // create new_branch and switch to that branch
+git checkout main             // switching to the main branch
+
+great way to visualize the concept:
+http://git-school.github.io/visualizing-git
+
+
+merge branches or feature branches with the main branch
+---------------------------------------------------
+git checkout main
+git merge new_branch
+
+remove the commits
+----------------------------------------------------
+git reset --hard <get the commit id of the origin>    //permanently remove the committs
+git reset --soft <get the commit id of the origin>    //softly remove the committs. they will be moved to staging area
+
+
+grouping commits from new branches and master into one
+----------------------------------------------------
+git reset --mixed <get the commit id of the origin>    //moves to working directory
+git status      //check all the changes. It will be a mix of all changes in the new branch and the master
+git add .
+git commit -m "your message"    // commit all the changes at once
+
+
+cloning repo to other systems
+-----------------------------------------------------
+git clone <https link> 
