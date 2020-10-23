@@ -16,6 +16,13 @@ git config user.email "jbiswakarma01@gmail.com"     // to set up a specific user
 git remote add origin  https://github.com/bJitu/learn_git.git
 
 
+Adding an alias command to show the history in a graphical way
+----------------------------------------------------
+git config --global alias.hist "log --graph --date-order --date=short --pretty=format:'%C(auto)%h%d %C(reset)%s %C(bold blue)%ce %C(reset)%C(green)%cr (%cd)'"
+
+git hist --branches   //to show all the branches
+
+
 Check configurations
 ---------------------------------------------------
 git config --list   //to list all the configs
@@ -159,5 +166,15 @@ git commit -am "message"    // commit the changes
 all the above commands can be achieved by:    git pull
 
 
-learn git fork, upstream and pull requests
--------------------------------------------------------
+list remote branches
+--------------------------------------------------------
+git list-remote
+git remote -v  (to see the url of the git branch)
+
+
+fetch the branch in local from remote
+--------------------------------------------------------
+git fetch origin <branch_name>
+git branch -a
+git checkout --track origin <branch_name>
+
