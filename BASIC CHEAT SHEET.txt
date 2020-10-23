@@ -117,3 +117,47 @@ git commit -m "your message"    // commit all the changes at once
 cloning repo to other systems
 -----------------------------------------------------
 git clone <https link> 
+
+
+working in detached mode
+-----------------------------------------------------
+git checkout <the commit id>     // this will checkout the state of git at that commit
+try out and make your changes.   // a series of git commits
+these commits only moves the HEAD but a branch won't be created (see attachment detached_head_mode.PNG)
+
+git branch new_branch    //to keep the changes
+
+if you do not keep the changes, they will be lost after some days or months by the garbage collector daemon.
+
+
+git rebase
+------------------------------------------------------
+adds all the commits from a feature branch on top of the master branch or vice versa
+
+does not maintain history
+
+
+git checkout new_branch
+git rebase master    // puts all the work done in the new_branch in master 
+                     // orphans the previous commits in the new_branch
+git checkout master
+git merge new_branch
+
+adding tags
+-------------------------------------------------------
+git tag <tag_name>
+example: git tag stable_v1
+
+
+pulling from the repository
+-------------------------------------------------------
+git fetch       // fetches the history in the cloud repo
+git merge       // merges the local and cloud changes
+
+git commit -am "message"    // commit the changes 
+
+all the above commands can be achieved by:    git pull
+
+
+learn git fork, upstream and pull requests
+-------------------------------------------------------
